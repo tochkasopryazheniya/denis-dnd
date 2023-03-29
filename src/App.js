@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/style/style.scss';
+import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import {Route, Routes} from "react-router-dom";
+import StartPage from "./pages/StartPage";
+import Adventures from "./pages/Adventures";
+import Heroes from "./pages/Heroes";
+import Players from "./pages/Players";
+import Worlds from "./pages/Worlds";
+import About from "./pages/About";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+        <Route path='/' element={<StartPage/>}/>
+        <Route path='/adventures' element={<Adventures/>}/>
+        <Route path='/heroes' element={<Heroes/>}/>
+        <Route path='/players' element={<Players/>}/>
+        <Route path='/worlds' element={<Worlds/>}/>
+        <Route path='/aboutme' element={<About/>}/>
+    </Routes>
   );
 }
 
