@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap');
 @import "burger";
+@import "player";
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -142,6 +143,7 @@ a {
   border-radius: 20px;
   width: 45%;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 
@@ -166,6 +168,120 @@ a {
   font-size: 25px;
   font-weight: 700;
   margin-top: 30px;
+}
+
+.oneHero {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.oneHero-header {
+  display: flex;
+}
+
+.oneHero-header-name, .oneHero-header-level {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.oneHero-header-name {
+  margin-bottom: 20px;
+}
+
+.oneHero-header-level {
+  margin-right: 40px;
+}
+
+.oneHero-header-info {
+  margin-left: 40px;
+  width: 100%;
+}
+
+.oneHero-lvlBlock {
+  display: flex;
+  align-items: center;
+}
+
+.oneHero-history {
+  font-size: 30px;
+  padding: 0px 20px;
+}
+
+.oneHero-history-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.oneHero-adventure {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+.progress {
+  height: 20px;
+  border-radius: 30px;
+  background-color: rgb(232, 232, 232);
+  margin-bottom: 5px;
+  width: 50%;
+  position: relative;
+
+  &__inner {
+    height: 100%;
+    border-radius: 30px;
+    width: 80%;
+    background: rgb(18, 231, 48);
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  }
+}
+
+.progress-start {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  z-index: 111111111;
+}
+
+.progress-end {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.progress-stats {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-exp {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  top: 0;
+}
+
+.oneHero-avatar {
+  align-self: flex-start;
+}
+
+.oneHero-history-mobile {
+  display: none;
+}
+
+.oneHero-history-mobileContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oneHero-history-mobileImg {
+  width: 25px;
+  height: 25px;
+  margin-top: -18px;
+  margin-left: 20px;
 }
 
 
@@ -209,6 +325,42 @@ a {
   .heroCard {
     width: 100%;
   }
+
+  .oneHero-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oneHero-avatar {
+    align-self: unset;
+    width: 250px;
+  }
+
+  .oneHero-header-name {
+    text-align: center;
+  }
+
+  .oneHero-header-info {
+    margin-left: 0;
+  }
+
+  .oneHero-lvlBlock {
+    width: 100%;
+  }
+
+  .progress {
+    width: 70%;
+  }
+
+  .oneHero-adventure {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .oneHero-history {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {
@@ -241,7 +393,7 @@ a {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
   .start-img {
     width: 50px !important;
     height: 50px !important;
@@ -253,6 +405,18 @@ a {
 
   .start-title {
     font-size: 16px;
+  }
+
+  .oneHero-header-name,  .oneHero-header-level, .oneHero-adventure, .oneHero-history-title, .oneHero-history-text{
+    font-size: 25px;
+  }
+
+  .oneHero-history {
+    display: none;
+  }
+
+  .oneHero-history-mobile {
+    display: block;
   }
 }
 

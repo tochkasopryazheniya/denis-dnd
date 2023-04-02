@@ -1,0 +1,310 @@
+.playerCard {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+
+  span {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
+
+.heroCard-bio {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.playerCard-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.playerCard-name {
+  font-size: 20px;
+  font-weight: 600;
+
+  span {
+    font-weight: 400;
+  }
+}
+
+.heroCard-lvl {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.heroCart-history {
+  width: 40%;
+}
+
+.playerCard-bio {
+  width: 40%;
+}
+
+.playerCard-hero {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.playerCard-heroes {
+  display: flex;
+  align-items: center;
+}
+
+.playerInfo {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerInfo-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.playerInfo-name {
+  font-weight: 600;
+  font-size: 25px;
+  width: 50%;
+  text-align: center;
+
+  div {
+    font-weight: 400;
+    font-size: 18px;
+    white-space: pre-wrap;
+  }
+}
+
+.nickname {
+  margin-bottom: 50px;
+}
+
+.playerInfo-heroesAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+
+}
+
+.playerInfo-achievements {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.playerInfo-achievement {
+  display: flex;
+  align-items: center;
+}
+
+.achievement-text {
+  text-align: left;
+}
+
+.achievement-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+
+.achievement-title {
+  font-weight: 600 !important;
+  margin-top: 20px;
+}
+
+.avatar-block {
+  position: relative;
+}
+
+.playerCard-rating-mobile {
+
+  display: none;
+  img {
+    width: 25px;
+    margin-right: 15px;
+  }
+}
+
+.playerInfo {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerInfo-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.playerInfo-name {
+  font-weight: 600;
+  font-size: 25px;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+
+  div {
+    font-weight: 400;
+    font-size: 18px;
+    white-space: pre-wrap;
+  }
+}
+
+.nickname {
+  margin-bottom: 50px;
+}
+
+.playerInfo-heroesAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+
+}
+
+.playerInfo-achievements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerInfo-achievement {
+  display: flex;
+  align-items: center;
+}
+
+.achievement-text {
+  text-align: left;
+}
+
+.achievement-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+
+.achievement-title {
+  font-weight: 600 !important;
+}
+
+.achievement-upperTitle {
+  font-weight: 700;
+}
+
+.avatar-block {
+  position: relative;
+}
+.rating {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #11E63B;
+  font-weight: 600;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playerInfo-description {
+  width: 100%;
+}
+
+.playerInfo-heroes {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.playerInfo-heroes-title {
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.playerInfo-achievs {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@media (max-width: 1199px) {
+  .heroCart-history {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .heroCart-history {
+    display: none;
+  }
+
+  .playerCard-avatar {
+    margin-right: 25px;
+  }
+
+  .heroCart-exp-number {
+    text-align: center;
+  }
+
+  .achievement-upperTitle {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .heroCart-exp {
+    display: none;
+  }
+
+  .playerCard-rating-mobile {
+    display: block;
+  }
+}
+
+@media(max-width: 488px) {
+  .playerCard-avatar {
+    margin-right: 10px !important;
+  }
+
+  .playerCard-heroes {
+    display: none;
+  }
+
+  .heroCard-bio {
+    align-items: flex-start;
+  }
+
+  .playerCard-name {
+    font-size: 30px;
+  }
+}
