@@ -28,7 +28,7 @@ const OneAdventure = () => {
         alert('ОШИБКА')
     }
 
-    console.log(data)
+
     return (
         <>
             <Header/>
@@ -36,7 +36,7 @@ const OneAdventure = () => {
                 <div className="playerInfo">
                     <div className='avatar-block'>
                         <img className='playerInfo-avatar'
-                             src={`${API_URL}${data.attributes.icon.data[0].attributes.url}`}
+                             src={`${API_URL}${data.attributes.icon.data.attributes.url}`}
                              alt=""/>
                     </div>
                     <div className='playerInfo-name'>{data.attributes.name}</div>

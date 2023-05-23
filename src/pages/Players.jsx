@@ -22,7 +22,6 @@ const Players = () => {
         alert('ОШИБКА')
     }
 
-    console.log(data)
     return (
         <>
             <Header/>

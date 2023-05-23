@@ -15,7 +15,6 @@ const fetchWorlds = async() => {
 const Worlds = () => {
     const {data, isLoading, isError} = useQuery('worlds', fetchWorlds);
 
-    console.log(data)
 
     if (isLoading) {
         return <Loader/>
@@ -31,7 +30,7 @@ const Worlds = () => {
             <Header/>
             <div className="container">
                 {data.map(item => {
-                    return <WorldsItem key={item.data} data={item}/>
+                    return <WorldsItem key={item.id} data={item}/>
                 })}
             </div>
         </>

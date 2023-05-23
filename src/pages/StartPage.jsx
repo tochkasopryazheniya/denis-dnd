@@ -29,10 +29,10 @@ const StartPage = () => {
                    <h3 className='start-title'>Игроки</h3>
                </Link>
 
-               {/*<div className='start-item last-link'>*/}
-               {/*    <img className='start-img' src={sword} alt="хуита"/>*/}
-               {/*    <h3 className='start-title'>Приключения</h3>*/}
-               {/*</div>*/}
+               <Link to='/aboutme' className='start-item last-link'>
+                   <img className='start-img' src={sword} alt="хуита"/>
+                   <h3 className='start-title'>Об авторе</h3>
+               </Link>
            </div>
         </div>
     );

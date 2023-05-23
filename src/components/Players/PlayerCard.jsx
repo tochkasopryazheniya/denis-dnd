@@ -16,7 +16,7 @@ const PlayersCard = ({data}) => {
             <div className='playerCard'>
                 <div className="heroCard-bio playerCard-bio">
                     <div className='playerCard-rating'>
-                        <img src={`${API_URL}${data.attributes.avatar.data.attributes.url}`} alt=""
+                        <img src={`${API_URL}${data.attributes.avatar.data.attributes?.url}`} alt=""
                              className="playerCard-avatar"/>
                         <div className='playerCard-rating-mobile'>
                             <img src={star} alt=""/>
@@ -27,7 +27,7 @@ const PlayersCard = ({data}) => {
                         <div className="playerCard-name">{data.attributes.name}</div>
                         <div className='playerCard-heroes'>
                             <div style={{marginRight: '27px'}}>Персонажи:</div>
-                            {data.attributes.heroes.data.map(hero => {
+                            {data.attributes?.heroes?.data.map(hero => {
                                 return <img key={hero.id} onClick={(e) => onHeroNavigate(e, hero.id)} style={{marginRight: '10px'}} className='playerCard-hero'
                                             src={`${API_URL}${hero.attributes.avatar.data.attributes.url}`} alt=""/>
 
@@ -35,11 +35,15 @@ const PlayersCard = ({data}) => {
                         </div>
                         <div style={{marginTop: '20px'}} className='playerCard-heroes'>
                             <div style={{marginRight: '20px'}}>Достижения:</div>
-                            {data.attributes.achievements.data.map(achiev => {
-                                return <img key={achiev.id} style={{marginRight: '10px'}} className='playerCard-hero'
-                                            title={achiev.attributes.name}
-                                            src={`${API_URL}${achiev.attributes.avatar.data.attributes.url}`} alt=""/>
-                            })}
+                            {data.attributes.achievements?.data?.length ? (
+                                data.attributes.achievements?.data?.map(achiev => {
+                                        return <img key={achiev.id} style={{marginRight: '10px'}} className='playerCard-hero'
+                                                    title={achiev.attributes.name}
+                                                    src={`${API_URL}${achiev.attributes.avatar.data.attributes.url}`} alt=""/>
+                                    })
+                            ) : (
+                                '-'
+                            )}
                         </div>
                     </div>
                 </div>

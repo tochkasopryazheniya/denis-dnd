@@ -10,6 +10,7 @@ import About from "./pages/About";
 import OneHero from "./pages/OneHero";
 import OnePlayer from "./pages/OnePlayer";
 import OneAdventure from "./pages/OneAdventure";
+import OneWorld from "./pages/OneWorld";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/heroes' element={<Heroes/>}/>
         <Route path='/players' element={<Players/>}/>
         <Route path='/worlds' element={<Worlds/>}/>
+        <Route path='/worlds/:id' element={<OneWorld/>}/>
         <Route path='/aboutme' element={<About/>}/>
         <Route path='/heroes/:id' element={<OneHero/>}/>
         <Route path='/players/:id' element={<OnePlayer/>}/>

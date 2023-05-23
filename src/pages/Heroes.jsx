@@ -9,10 +9,9 @@ import HeroesItem from "../components/Heroes/HeroesItem";
 const fetchHeroes = async () => {
     try {
         const response = await axios.get(`${API_URL}/api/heroes?populate=deep,3`);
-        console.log(response.data.data)
         return response.data.data
     } catch (e) {
-        console.log(e)
+
     }
 }
 

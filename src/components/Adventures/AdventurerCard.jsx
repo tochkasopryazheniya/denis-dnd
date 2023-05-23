@@ -8,32 +8,35 @@ const PlayersCard = ({data}) => {
 
     const onHeroNavigate = (e, id) => {
         e.preventDefault();
-        navigate(`/adventures/${id}`)
+        navigate(`/heroes/${id}`)
     }
 
-    console.log(data)
+    const onWorldNavigate = (e, id) => {
+        e.preventDefault();
+        navigate(`/worlds/${id}`)
+    }
 
     return (
         <Link to={`/adventures/${data.id}`}>
             <div className='playerCard'>
                 <div className="heroCard-bio playerCard-bio">
                     <div className='playerCard-rating'>
-                        <img src={`${API_URL}${data.attributes.icon.data[0].attributes.url}`} alt=""
+                        <img src={`${API_URL}${data.attributes.icon.data.attributes.url}`} alt=""
                              className="playerCard-avatar"/>
                     </div>
                     <div>
                         <div className="playerCard-name">{data.attributes.name}</div>
                         <div className='playerCard-heroes'>
-                            {/*<div style={{marginRight: '27px'}}>Персонажи:</div>*/}
-                            {/*{data.attributes.heroes.data.map(hero => {*/}
-                            {/*    return <img key={hero.id} onClick={(e) => onHeroNavigate(e, hero.id)} style={{marginRight: '10px'}} className='playerCard-hero'*/}
-                            {/*                src={`${API_URL}${hero.attributes.avatar.data.attributes.url}`} alt=""/>*/}
+                            <div style={{marginRight: '27px'}}>Персонажи:</div>
+                            {data.attributes.heroes.data.map(hero => {
+                                return <img key={hero.id} onClick={(e) => onHeroNavigate(e, hero.id)} style={{marginRight: '10px'}} className='playerCard-hero'
+                                            src={`${API_URL}${hero.attributes.avatar.data.attributes.url}`} alt=""/>
 
-                            {/*})}*/}
+                            })}
                         </div>
                         <div style={{marginTop: '20px'}} className='playerCard-heroes'>
                             <div style={{marginRight: '20px'}}>Миры:</div>
-                            <img style={{marginRight: '10px'}} className='playerCard-hero'
+                            <img onClick={(e) => onWorldNavigate(e, data.attributes.world.data.id)} style={{marginRight: '10px'}} className='playerCard-hero'
                                  src={`${API_URL}${data.attributes.world.data.attributes.icon.data.attributes.url}`} alt=""/>
                         </div>
                     </div>

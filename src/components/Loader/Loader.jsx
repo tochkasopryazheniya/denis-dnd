@@ -1,8 +1,9 @@
 import React from 'react';
+import loader from '../../assets/img/loader.gif'
 
 const Loader = () => {
     return (
-        <h1>Загрузка...</h1>
+        <img className='loader' src={loader} alt=""/>
     );
 };
 

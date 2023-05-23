@@ -38,7 +38,6 @@ const OneHero = () => {
         alert('Ошибка');
     }
 
-    console.log(lvlPercentage)
 
     return (
         <>

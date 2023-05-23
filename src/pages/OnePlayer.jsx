@@ -60,7 +60,7 @@ const OnePlayer = () => {
                     <div style={{marginBottom: '30px'}} className='playerInfo-heroes'>
                         <div className='playerInfo-heroes-title'>Достижения</div>
                         <div className='playerInfo-achievements'>
-                            {data.attributes.achievements.data.map(achiev => {
+                            {data?.attributes?.achievements?.data.map(achiev => {
                                 return (
                                     <div key={achiev.id} className='playerInfo-achievement'>
                                         <img className='achievement-avatar'
